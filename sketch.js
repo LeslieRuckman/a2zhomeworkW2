@@ -29,6 +29,10 @@ function hoverWord() {
 function setup() {
   //console.log(this);
 	noCanvas();
+  input = select('#words');
+  button = select('#submit');
+
+  button.mousePressed(handleInput);
 
   var wordP = select("#words");
   var wordP1 = select("#words1");
@@ -115,5 +119,21 @@ function setup() {
 		var space8 = createSpan(" ");
 		space8.parent(wordP8);
 	}
+
+}
+
+function handleInput(){
+  console.log("did it!");
+  var nope = createSpan("nope");
+
+  words.replace(/famous/,"almost");
+  words1.replace(/famous/,"almost");
+  words2.replace(/famous/,"almost");
+  words3.replace(/famous/,"almost");
+  words4.replace(/famous/,"almost");
+  words5.replace(/famous/,"almost");
+  words6.replace(/famous/,"almost");
+  words7.replace(/famous/,"almost");
+  words8.replace(/famous/,"almost");
 
 }
